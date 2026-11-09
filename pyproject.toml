@@ -1,0 +1,30 @@
+[project]
+name = "reservas-estudo"
+version = "0.1.0"
+description = "Reservas de salas de estudo para a atividade AT2 de QTS"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115",
+    "httpx>=0.27",
+    "pydantic[email]>=2.8",
+    "uvicorn>=0.30",
+]
+
+[dependency-groups]
+dev = [
+    "axe-playwright-python>=0.1.5",
+    "faker>=30",
+    "locust>=2.31",
+    "pytest>=8",
+    "pytest-mock>=3",
+    "pytest-playwright>=0.6",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "integration: testes da API e do banco de dados",
+    "e2e: fluxos completos no navegador",
+    "accessibility: auditoria WCAG 2.1 AA e teclado",
+]

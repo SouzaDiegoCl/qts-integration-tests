@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reservas de salas de estudo</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="/static/app.js" defer></script>
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <p class="eyebrow">Biblioteca</p>
+        <h1>Reservas de salas de estudo</h1>
+        <p>Escolha uma sala e um horário para estudar.</p>
+      </header>
+
+      <section aria-labelledby="formulario-titulo" class="card">
+        <h2 id="formulario-titulo">Nova reserva</h2>
+        <form id="reserva-form">
+          <div class="field"><label for="nome">Nome</label><input id="nome" name="nome" autocomplete="name" required minlength="2" maxlength="80"></div>
+          <div class="field"><label for="email">E-mail</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+          <div class="field"><label for="sala">Sala</label><select id="sala" name="sala" required><option value="">Selecione uma sala</option><option>Sala 1</option><option>Sala 2</option><option>Sala 3</option></select></div>
+          <div class="field"><label for="data">Data</label><input id="data" name="data" type="date" required></div>
+          <div class="field"><label for="horario">Horário</label><select id="horario" name="horario" required><option value="">Selecione um horário</option><option>09:00</option><option>14:00</option><option>19:00</option></select></div>
+          <button type="submit">Reservar sala</button>
+        </form>
+        <p id="mensagem" role="status" aria-live="polite"></p>
+      </section>
+
+      <section aria-labelledby="reservas-titulo" class="card">
+        <h2 id="reservas-titulo">Reservas cadastradas</h2>
+        <p id="lista-vazia">Nenhuma reserva cadastrada.</p>
+        <ul id="reservas" aria-label="Reservas cadastradas"></ul>
+      </section>
+    </main>
+  </body>
+</html>

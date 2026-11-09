@@ -1,0 +1,10 @@
+.venv/
+.pytest_cache/
+__pycache__/
+*.py[cod]
+.playwright/
+data/
+*.db
+*.db-journal
+locust_*.csv
+locust_*.html
